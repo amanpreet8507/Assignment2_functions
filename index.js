@@ -20,19 +20,6 @@ Your function should look like
 
 // studentWithHighestMarks(student);
 
-let modifiedStudentWithHighestMarks = student.map(function(stu) {
-    let total = 0;
-    for(i = 0; i<stu.marks; i++)
-    {
-        total+=i ;
-        
-    }
- 
-    return stu;
-
-})
-
-console.log(student);
 
 
 /*Question 2
