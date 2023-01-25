@@ -28,7 +28,8 @@ function studentWithHighestMarks(arr) {
 studentNameWithHighMarks = studentWithHighestMarks(student);
 console.log(studentNameWithHighMarks, "has highest marks.");
     
-    
+
+
 
 /*Question 2
 Write a function which finds the minimum value in an array using HOF’s.
