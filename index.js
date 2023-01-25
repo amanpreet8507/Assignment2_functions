@@ -11,29 +11,24 @@ can add values to the objects of these arrays.
 YOU HAVE TO USE ES6 FUNCTIONS (HOF’s) only.
 Your function should look like
 */
-// function studentWithHighestMarks(arr) {
-// // return student name
-//     console.log(arr.marks);
+function studentWithHighestMarks(arr) {
+    // return student name
+        let studentName;
+        let highestMarksOfStudent = 0;
+        arr.forEach(student => {
+            let totalMarks = student.marks.reduce((acc, mark) => acc + mark);
+            if (totalMarks > highestMarksOfStudent) {
+                highestMarksOfStudent = totalMarks;
+                studentName = student.name;
+            }
+        });
+        return studentName;
+    };
+
+studentNameWithHighMarks = studentWithHighestMarks(student);
+console.log(studentNameWithHighMarks, "has highest marks.");
     
-
-// }
-
-// studentWithHighestMarks(student);
-
-let modifiedStudentWithHighestMarks = student.map(function(stu) {
-    let total = 0;
-    for(i = 0; i<stu.marks; i++)
-    {
-        total+=i ;
-        
-    }
- 
-    return stu;
-
-})
-
-console.log(student);
-
+    
 
 /*Question 2
 Write a function which finds the minimum value in an array using HOF’s.
@@ -61,7 +56,7 @@ let myString = "helloWorld";
 
 
 function lengthOfString(string) {
-    let changedString = string.split('');
+    let changedString = [...string]
     console.log(changedString.length);
     
 }
